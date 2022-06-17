@@ -1,0 +1,186 @@
+/* Google Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:wght@100;300;400&display=swap");
+
+
+/* CSS RESET*/
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://cdn.pixabay.com/photo/2022/06/02/15/01/music-7238254_960_720.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* NavBar*/
+.img-logo img {
+    margin-top: 15%;
+    width: 140px;
+    margin-left: 20px;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999999;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: #8a2990;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0.782);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {
+    font-size: 16px;
+    font-weight: 600;
+    color: #8a2990;
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.nav-menu {
+    height: 100vh;
+}
+
+#check:checked~.nav-menu li {
+    display: block;
+}
+
+/* Texto NavBar*/
+
+.banner-text {
+    padding: 0 30px;
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+}
+
+.banner-text h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.banner-text span {
+    color: #8a2990;
+}
+
+.banner-text h2 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.btn-show {
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: #8a2990;
+    color: white;
+    border-radius: 7px;
+}
+
+.btn-show:hover {
+    background-color: white;
+    color: #8a2990;
+    transition: .4s;
+}
+
+.btn-contacto {
+    margin-right: 40px;
+    padding: 10px 30px;
+    font-weight: 600;
+    color: #8a2990;
+    border: 2px solid white;
+    border-radius: 7px;
+}
+
+.btn-contacto:hover {
+    background-color: #8a2990;
+    color: white;
+    transition: .4s;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 768px) {
+    .img-logo{
+        margin-left: 50px;
+    }
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+       display: none; 
+    }
+    .nav-menu{
+    position: relative;
+    height: 100px;
+    top: 0;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+    }
+.nav-menu li{
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 20px;
+    transition: none;
+}
+
+.nav-menu li a{
+    font-size: 14px;
+}
+
+.banner-text h1{
+font-size: 70px;
+margin-bottom: 30px;
+}
+.banner-text h2{
+    font-size: 20px;
+}
+
+}
